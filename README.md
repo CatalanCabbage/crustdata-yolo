@@ -12,3 +12,20 @@ Goals:
 - **Dynamic validation**: Validate API call answers, fix using error logs from response
 - **Ingestion of additional knowledge base**: Add QnAs, update documentation and APIs
 - **Slack integration**  Works on specific channels and users, drafts a response
+
+## Drafts
+Plan: 
+1. Extract docs data into a custom DB
+2. Have a RAG step that fetches the API most suitable to the user's query from our custom DB
+3. Share this as context to the LLM to answer the query. If API is involved, get API code back for validation.
+4. For API additions/mods: update custom DB
+5. For QnAs: add as additional context (either in the 1st LLM call or after that if )
+
+Questions:
+|???|Reason?|Answer|
+|----|----|----|
+|What kind of APIs are present, how are they distinct?|Will decide how sophisticated RAG needs to be||
+|What context is needed by LLM to draft one API?|Will decide what data needs to be extracted in RAG||
+
+
+Cases: Maybe the question has nothing to do with APIs
